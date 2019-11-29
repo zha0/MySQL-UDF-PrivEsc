@@ -1,7 +1,7 @@
 # MySQL-UDF-PrivEsc
 Using MySQL UDF to excute system commands
 <br/>Prerequisites:
-- mysqld must run as root
+- mysqld must run as root (ps aux | grep mysqld)
 - you must know know the credentials of a MySQL user that has the permission to create stored function on the DBMS
 
 # How does it works?

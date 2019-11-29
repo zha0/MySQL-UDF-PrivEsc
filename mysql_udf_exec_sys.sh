@@ -19,13 +19,13 @@ do
       s ) argS="$OPTARG" ;;
       p ) argP="$OPTARG" ;;
       c ) argC="$OPTARG" ;;
-	  u ) argU="$OPTARG" ;;
+      u ) argU="$OPTARG" ;;
       ? ) helpMe ;; # Print help in case parameter is non-existent
    esac
 done
 
 # Print help in case parameters are empty
-if [ -z "$argS" ] || [ -z "$argP" ] || [ -z "$argC" ] [ -z "$argU" ]
+if [ -z "$argS" ] || [ -z "$argP" ] || [ -z "$argC" ] || [ -z "$argU" ]
 then
    echo "Missing arguments, printing help...";
    helpMe

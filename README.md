@@ -2,7 +2,7 @@
 Using MySQL UDF to excute system commands
 <br/>Prerequisites:
 - mysqld must run as root (ps aux | grep mysqld)
-- you must know know the credentials of a MySQL user that has the permission to create stored function on the DBMS
+- you must know the credentials of a MySQL user that has the permission to create stored function on the DBMS
 
 # How does it works?
 The script use UDF shared library on MySQL to execute commands on a system, if mysqld run as root, so the passed (-c)ommand will be executed as root. On a 64bit *nix box you can pass the compiled .so included in this repo.<br/>

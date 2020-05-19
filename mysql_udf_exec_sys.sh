@@ -49,7 +49,7 @@ pathMPlugin=$(mysql mysql -u $argU -p$argP -N -se "SHOW VARIABLES WHERE Variable
 echo "MySql  $pathMPlugin"
 
 #apppend the file name to the plugin path
-fullPath=${pathMPlugin}${f}
+fullPath="${pathMPlugin}/${f}"
 
 #get rid of plugin_dir part from the string 
 cleanPath=${fullPath:11}
